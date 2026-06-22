@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradise Spas and Outdoor Living | #1 in Backyard Fun — North Dakota</title>
+  <meta name="description" content="Paradise Spas and Outdoor Living — North Dakota's oldest spa store since 1992. Artesian Spas, Eco Spas, Strong Spas, saunas, massage chairs, and more. Serving the Midwest." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ---- PARADISE SPAS OVERRIDES ---- */
+    :root {
+      --color-primary: #e01010;
+      --color-primary-dark: #c00000;
+    }
+
+    /* HERO — clean white layout */
+    .hero {
+      background: #fff;
+      padding: 56px 0 48px;
+      overflow: hidden;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #555;
+      background: #f0f0f0;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 2.9rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #111;
+      margin-bottom: 16px;
+    }
+    .hero-title .highlight { color: #e01010; }
+    .hero-desc {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 28px;
+      line-height: 1.75;
+    }
+    .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+    .hero-cta-row .btn-primary {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      font-size: 1rem;
+      padding: 16px 28px;
+      border-radius: 8px;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #444;
+    }
+    .trust-icon {
+      font-size: 1rem;
+      color: #f5a623;
+    }
+
+    /* BRANDS SECTION */
+    .brands-section {
+      padding: 56px 0;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .brands-section .section-header { margin-bottom: 36px; }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .brand-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 20px;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      text-align: center;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); border-color: #ccc; }
+    .brand-logo-wrap {
+      width: 100%; height: 80px;
+      border-radius: 0;
+      background: #fff0f0;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      font-size: 1.8rem;
+    }
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .brand-desc {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.5;
+    }
+    .brand-cta {
+      margin-top: 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #e01010;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* FEATURED PRODUCTS */
+    .featured-section {
+      padding: 64px 0;
+      background: #f5f7fa;
+    }
+
+    /* ABOUT SPLIT */
+    .about-section {
+      padding: 64px 0;
+      background: #fff;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    }
+    .about-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+    .about-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e01010;
+      margin-bottom: 10px;
+    }
+    .about-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .about-desc {
+      font-size: 0.975rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .about-stat {
+      text-align: center;
+      padding: 16px 10px;
+      background: #fff0f0;
+      border-radius: 8px;
+    }
+    .about-stat-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #e01010;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .about-stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+    }
+
+    /* WHY CHOOSE */
+    .why-section {
+      padding: 64px 0;
+      background: #f5f7fa;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .why-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 28px 22px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .why-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .why-icon {
+      width: 54px; height: 54px;
+      background: #e01010;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      color: #fff;
+      font-size: 1.3rem;
+    }
+    .why-title { font-size: 1rem; font-weight: 800; color: #111; margin-bottom: 8px; }
+    .why-desc { font-size: 0.85rem; color: #777; line-height: 1.6; }
+
+    /* REVIEWS */
+    .reviews-section {
+      padding: 64px 0;
+      background: #fff;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .review-card {
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 28px;
+    }
+    .review-stars { color: #f5a623; font-size: 1rem; margin-bottom: 12px; }
+    .review-text {
+      font-size: 0.92rem;
+      color: #444;
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: #e01010;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .review-name { font-size: 0.875rem; font-weight: 800; color: #111; }
+    .review-location { font-size: 0.78rem; color: #888; }
+    .reviews-footer { text-align: center; }
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f5f7fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #333;
+    }
+    .google-badge .stars { color: #f5a623; }
+
+    /* PARTS STORE SPLIT */
+    .parts-section {
+      padding: 64px 0;
+      background: #e01010;
+    }
+    .parts-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .parts-content .about-label { color: rgba(255,255,255,0.7); }
+    .parts-title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .parts-desc {
+      font-size: 0.975rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .parts-bullets { margin-bottom: 28px; }
+    .parts-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 10px;
+    }
+    .parts-bullets li::before {
+      content: '\2713';
+      width: 20px; height: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .parts-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+    }
+    .parts-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: #111;
+      padding: 72px 0;
+      text-align: center;
+    }
+    .cta-banner .section-title { color: #fff; font-size: 2.2rem; margin-bottom: 12px; }
+    .cta-banner .section-subtitle { color: rgba(255,255,255,0.65); margin-bottom: 32px; }
+    .cta-btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* GALLERY STRIP */
+    .gallery-strip {
+      padding: 56px 0;
+      background: #fff;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 36px;
+    }
+    .gallery-item {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner, .parts-inner { grid-template-columns: 1fr; gap: 36px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item:first-child { grid-column: span 1; grid-row: span 1; }
+    }
+    @media (max-width: 768px) {
+      /* HERO — stack vertically on mobile */
+      .hero { padding: 36px 0 32px; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .hero-content { text-align: center; }
+      .hero-eyebrow { font-size: 0.7rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-desc { font-size: 0.95rem; }
+      .hero-cta-row { justify-content: center; }
+      .hero-cta-row .btn-primary { max-width: 100%; width: 100%; }
+      .hero-trust { justify-content: center; gap: 12px; }
+      /* Featured card — full width below copy, photo fully visible */
+      .hero-featured-cart { width: 100%; display: block; }
+      .featured-cart-card { display: block; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.12); border: 1px solid #eee; }
+      .featured-cart-card img { height: 260px; width: 100%; object-fit: cover; display: block; }
+      /* Quick links — 2 col on mobile */
+      .quick-links-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .quick-link-card { padding: 16px; }
+      .quick-link-title { font-size: 1rem; }
+      .quick-link-desc { display: none; }
+      /* Inventory grid — 1 col */
+      .inventory-grid { grid-template-columns: 1fr; }
+      /* Brands — 2 col */
+      .brands-grid { grid-template-columns: 1fr 1fr; }
+      /* Why grid — 2 col */
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      /* Reviews — 1 col */
+      .reviews-grid { grid-template-columns: 1fr; }
+      /* About stats — 3 col */
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+      /* Gallery — 2 col */
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      /* Section titles */
+      .section-title { font-size: 1.6rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 1.75rem; }
+      .quick-links-grid { grid-template-columns: 1fr 1fr; }
+      .brands-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .topbar-inner { flex-direction: column; gap: 4px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span style="color:rgba(255,255,255,0.7); font-size:0.8rem;">North Dakota's Oldest Spa Store &mdash; Since 1992</span>
+      <a href="tel:7017460000" class="phone-link">&#9990; (701) 746-0000</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="images/paradise-spas-logo.webp" alt="Paradise Spas" style="height:52px;width:auto;display:block;" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <div class="has-dropdown">
+          <a href="#">Hot Tubs</a>
+          <div class="dropdown-menu">
+            <a href="#">Artesian Spas</a>
+            <a href="#">Eco Spas</a>
+            <a href="#">Strong Spas</a>
+            <a href="#">All Hot Tubs</a>
+          </div>
+        </div>
+        <a href="#">Swim Spas</a>
+        <a href="#">Saunas</a>
+        <a href="#">Massage Chairs</a>
+        <a href="#">Specials</a>
+        <a href="#">About</a>
+      </nav>
+      <a href="grand-cayman.html" class="btn btn-primary" style="font-size:0.78rem; padding:10px 20px;">Shop Hot Tubs</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <!-- LEFT: Copy -->
+          <div class="hero-content">
+            <span class="hero-eyebrow">Paradise Spas &middot; North Dakota's #1 Hot Tub Store</span>
+            <h1 class="hero-title">Shop our current selection of <span class="highlight">hot tubs</span> in stock.</h1>
+            <p class="hero-desc">Click shop inventory below to find the perfect hot tub for you, and we'll deliver and install it straight to your backyard.</p>
+            <div class="hero-cta-row">
+              <a href="grand-cayman.html" class="btn btn-primary">Shop Inventory &rarr;</a>
+            </div>
+            <div class="hero-trust">
+              <div class="hero-trust-item">
+                <span class="trust-icon">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>Hundreds of happy customers</span>
+              </div>
+              <div class="hero-trust-item">
+                <span style="font-size:1rem;">&#128666;</span>
+                <span>Delivery &amp; installation available</span>
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT: Featured product card -->
+          <div class="hero-featured-cart">
+            <a href="748b.html" class="featured-cart-card" style="text-decoration:none;display:block;">
+              <img src="images/748b-photo1.png" alt="2021 Artesian South Seas 748B" style="width:100%;height:300px;object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80'" />
+              <div class="featured-cart-info">
+                <div class="featured-cart-badge">Spa of the Week</div>
+                <div class="featured-cart-name">2021 Artesian South Seas 748B</div>
+                <div class="featured-cart-price">
+                  <span class="price-original">$9,999</span>
+                  <span class="price-sale">$7,499</span>
+                </div>
+                <span class="featured-cart-link">View Details &rarr;</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="quick-links">
+      <div class="container">
+        <div class="quick-links-grid">
+          <a href="grand-cayman.html" class="quick-link-card">
+            <div class="quick-link-icon">&#9832;</div>
+            <div class="quick-link-label">Browse</div>
+            <div class="quick-link-title">Hot Tubs</div>
+            <div class="quick-link-desc">Artesian, Eco, and Strong Spas &mdash; multiple brands, all sizes.</div>
+            <span class="quick-link-cta">Shop Now &rsaquo;</span>
+          </a>
+          <a href="#" class="quick-link-card">
+            <div class="quick-link-icon">&#127946;</div>
+            <div class="quick-link-label">Explore</div>
+            <div class="quick-link-title">Swim Spas</div>
+            <div class="quick-link-desc">TidalFit swim spas for fitness and family fun year-round.</div>
+            <span class="quick-link-cta">Learn More &rsaquo;</span>
+          </a>
+          <a href="#" class="quick-link-card">
+            <div class="quick-link-icon">&#9728;</div>
+            <div class="quick-link-label">Relax</div>
+            <div class="quick-link-title">Saunas</div>
+            <div class="quick-link-desc">Pro 6 and Golden Design saunas for home wellness.</div>
+            <span class="quick-link-cta">View Saunas &rsaquo;</span>
+          </a>
+          <a href="#" class="quick-link-card">
+            <div class="quick-link-icon">&#128722;</div>
+            <div class="quick-link-label">Parts &amp; Care</div>
+            <div class="quick-link-title">Parts Store</div>
+            <div class="quick-link-desc">Covers, filters, chemicals, and accessories at paradisespasparts.com.</div>
+            <span class="quick-link-cta">Shop Parts &rsaquo;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">Featured Models</div>
+          <h2 class="section-title">Shop Our Top Hot Tubs</h2>
+          <p class="section-subtitle">All models available to wet test at our showroom</p>
+        </div>
+        <div class="inventory-grid">
+
+          <a href="grand-cayman.html" class="cart-card">
+            <div class="cart-card-image">
+              <img src="https://artesianspas.com/wp-content/uploads/2023/06/Grand-Cayman-Elite-64-Jets-scaled.jpg" alt="Artesian Grand Cayman" onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80'" />
+              <span class="cart-card-badge">Best Seller</span>
+            </div>
+            <div class="cart-card-body">
+              <div class="cart-card-name">Artesian Grand Cayman &mdash; Island Series</div>
+              <div class="cart-card-prices">
+                <span class="sale" style="font-size:0.95rem; color:#e01010;">Contact for Pricing</span>
+              </div>
+              <div class="cart-card-tags">
+                <span class="cart-tag">7 Person</span>
+                <span class="cart-tag">Up to 72 Jets</span>
+                <span class="cart-tag">Elite Trim</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="cart-card">
+            <div class="cart-card-image">
+              <img src="https://artesianspas.com/wp-content/uploads/2023/06/Grand-Bahama-Elite-64-Jets-scaled.jpg" alt="Artesian Grand Bahama" onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80'" />
+            </div>
+            <div class="cart-card-body">
+              <div class="cart-card-name">Artesian Grand Bahama &mdash; Island Series</div>
+              <div class="cart-card-prices">
+                <span class="sale" style="font-size:0.95rem; color:#e01010;">Contact for Pricing</span>
+              </div>
+              <div class="cart-card-tags">
+                <span class="cart-tag">6 Person</span>
+                <span class="cart-tag">Up to 64 Jets</span>
+                <span class="cart-tag">Lounger</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="cart-card">
+            <div class="cart-card-image">
+              <img src="https://artesianspas.com/wp-content/uploads/2023/06/Captiva-Elite-68-Jets-scaled.jpg" alt="Artesian Captiva" onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80'" />
+              <span class="cart-card-badge">New</span>
+            </div>
+            <div class="cart-card-body">
+              <div class="cart-card-name">Artesian Captiva &mdash; Island Series</div>
+              <div class="cart-card-prices">
+                <span class="sale" style="font-size:0.95rem; color:#e01010;">Contact for Pricing</span>
+              </div>
+              <div class="cart-card-tags">
+                <span class="cart-tag">5 Person</span>
+                <span class="cart-tag">Up to 68 Jets</span>
+                <span class="cart-tag">Compact</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <div style="text-align:center; margin-top:36px;">
+          <a href="#" class="btn btn-dark">View All Hot Tubs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-image">
+            <img
+              src="https://img1.wsimg.com/isteam/ip/5555e37c-250a-4199-b4e2-cf6352810616/ChatGPT%20Image%20Apr%209%2C%202026%2C%2012_25_49%20PM.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:800,cg:true"
+              alt="Paradise Spas showroom and outdoor display"
+              onerror="this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80'"
+            />
+          </div>
+          <div class="about-content">
+            <div class="about-label">About Us</div>
+            <h2 class="about-title">Your Backyard Escape &mdash; Since 1992</h2>
+            <p class="about-desc">
+              Since 1992, Paradise Spas has been a family-owned business dedicated to helping customers create the perfect backyard escape. As the oldest spa store in North Dakota, we're known for our unmatched customer service, large selection of hot tubs and swim spas, and long-term support.
+            </p>
+            <p class="about-desc">
+              We service every spa we sell &mdash; no matter its age. We proudly serve customers across the Midwest and beyond, delivering a personal experience built on trust, care, and lasting relationships.
+            </p>
+            <a href="#" class="btn btn-primary">Meet Our Team</a>
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="about-stat-num">30+</div>
+                <div class="about-stat-label">Years in Business</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-num">5</div>
+                <div class="about-stat-label">Trusted Brands</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-num">#1</div>
+                <div class="about-stat-label">Oldest Spa Store in ND</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">Our Lineup</div>
+          <h2 class="section-title">Our Trusted Manufacturers</h2>
+          <p class="section-subtitle">We carry the best brands in the industry &mdash; all available to wet test in our showroom</p>
+        </div>
+        <div class="brands-grid">
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-artesian-final.png" alt="Artesian Spas" style="max-height:60px;max-width:100%;object-fit:contain;" /></div>
+            <div class="brand-name">Artesian Spas</div>
+            <div class="brand-desc">U.S.-made hot tubs with 30+ years of craftsmanship. Island, South Seas, Garden, and Elite collections.</div>
+            <span class="brand-cta">Shop Artesian &rsaquo;</span>
+          </a>
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-eco-final.png" alt="Eco Spas" style="max-height:60px;max-width:100%;object-fit:contain;" /></div>
+            <div class="brand-name">Eco Spas</div>
+            <div class="brand-desc">Energy-efficient hot tubs built for performance and sustainability without sacrificing comfort.</div>
+            <span class="brand-cta">Shop Eco Spas &rsaquo;</span>
+          </a>
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-strong-final.png" alt="Strong Spas" style="max-height:60px;max-width:100%;object-fit:contain;" /></div>
+            <div class="brand-name">Strong Spas</div>
+            <div class="brand-desc">Pennsylvania-made hot tubs with powerful hydrotherapy and durable construction.</div>
+            <span class="brand-cta">Shop Strong Spas &rsaquo;</span>
+          </a>
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-tidalfit-final.png" alt="TidalFit Swim Spas" style="max-height:60px;max-width:100%;object-fit:contain;" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=&quot;font-size:1.1rem;font-weight:800;color:#1565c0;&quot;>TidalFit</span>'" /></div>
+            <div class="brand-name">TidalFit Swim Spas</div>
+            <div class="brand-desc">Year-round swim spas for fitness, therapy, and family fun. Multiple sizes available.</div>
+            <span class="brand-cta">Shop Swim Spas &rsaquo;</span>
+          </a>
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-pro6-final.png" alt="Pro 6 Saunas" style="max-height:60px;max-width:100%;object-fit:contain;" /></div>
+            <div class="brand-name">Pro 6 Saunas</div>
+            <div class="brand-desc">Premium infrared and traditional saunas for home wellness and recovery.</div>
+            <span class="brand-cta">Shop Saunas &rsaquo;</span>
+          </a>
+          <a href="#" class="brand-card">
+            <div class="brand-logo-wrap"><img src="images/logo-osaki-final.png" alt="Osaki Massage Chairs" style="max-height:60px;max-width:100%;object-fit:contain;" /></div>
+            <div class="brand-name">Osaki Massage Chairs</div>
+            <div class="brand-desc">Full-body massage chairs for daily recovery and relaxation at home.</div>
+            <span class="brand-cta">Shop Chairs &rsaquo;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">Why Paradise Spas</div>
+          <h2 class="section-title">The Paradise Spas Difference</h2>
+          <p class="section-subtitle">We're not just a retailer &mdash; we're your long-term backyard partner</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">&#127968;</div>
+            <div class="why-title">Family Owned Since 1992</div>
+            <div class="why-desc">Over 30 years of serving North Dakota families. We treat every customer like a neighbor.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#128295;</div>
+            <div class="why-title">We Service What We Sell</div>
+            <div class="why-desc">Our in-house service team handles every spa we've ever sold &mdash; no matter how old.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#128722;</div>
+            <div class="why-title">Largest Selection in ND</div>
+            <div class="why-desc">5 major brands, dozens of models, all available to wet test before you buy.</div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">&#128176;</div>
+            <div class="why-title">Financing Available</div>
+            <div class="why-desc">Flexible financing options to fit any budget. Quick approvals, low monthly payments.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">Customer Reviews</div>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <div style="color:#f5a623; font-size:1.4rem; margin-top:8px;">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="font-size:1rem; color:#888; font-weight:700;">4.9 / 5 Average</span></div>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"We bought the Grand Bahama after wet testing quite a few different spas. The Artesian Grand Bahama had the jets and power in just the right places. We have now had it for 3 months and use it 1&ndash;2 hours every night. Everything has worked flawlessly."</p>
+            <div class="review-author">
+              <div class="review-avatar">MB</div>
+              <div>
+                <div class="review-name">M. &amp; B. Family</div>
+                <div class="review-location">North Dakota &mdash; Grand Bahama Owner</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"After a lot of online research, we went with the Artesian Grand Cayman 46. The jets are very powerful. The FROG@ease seems great and less hassle with the chemicals. Love the layout. Very roomy tub!"</p>
+            <div class="review-author">
+              <div class="review-avatar">MF</div>
+              <div>
+                <div class="review-name">Mathers Family</div>
+                <div class="review-location">North Dakota &mdash; Grand Cayman Owner</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">"Paradise Spas has been incredible from start to finish. They helped us pick the right size for our deck, handled delivery, and their service team has been responsive every time we've called. Couldn't ask for more."</p>
+            <div class="review-author">
+              <div class="review-avatar">JT</div>
+              <div>
+                <div class="review-name">J. Thompson</div>
+                <div class="review-location">Fargo, ND &mdash; Artesian Spa Owner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-footer">
+          <div class="google-badge">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>4.9 Stars on Google &mdash; 200+ Reviews</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTS STORE SPLIT -->
+    <section class="parts-section">
+      <div class="container">
+        <div class="parts-inner">
+          <div class="parts-content">
+            <div class="about-label">Parts &amp; Accessories</div>
+            <h2 class="parts-title">Keep Your Spa Running Like New</h2>
+            <p class="parts-desc">Looking for covers, filters, spa accessories or water care essentials? Visit our Paradise Spas Parts Store &mdash; your one-stop shop for everything you need to maintain and enjoy your spa.</p>
+            <ul class="parts-bullets">
+              <li>Replacement filters for all major brands</li>
+              <li>Water care chemicals &amp; test kits</li>
+              <li>Spa covers &amp; cover lifters</li>
+              <li>Steps, headrests &amp; accessories</li>
+              <li>Easy online ordering &amp; fast shipping</li>
+            </ul>
+            <a href="https://paradisespasparts.com/" target="_blank" class="btn btn-outline">Shop paradisespasparts.com &rsaquo;</a>
+          </div>
+          <div class="parts-image">
+            <img
+              src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
+              alt="Hot tub maintenance and parts"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-strip">
+      <div class="container">
+        <div class="section-header">
+          <div class="label-tag">Inspiration</div>
+          <h2 class="section-title">Envision Your Next Spa Getaway</h2>
+          <p class="section-subtitle">Real installations from Paradise Spas customers across the Midwest</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80" alt="Hot tub backyard installation" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Outdoor spa at night" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Backyard patio with spa" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&q=80" alt="Swim spa installation" />
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Family enjoying hot tub" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2 class="section-title">Ready to Build Your Backyard Escape?</h2>
+        <p class="section-subtitle">Visit our showroom and wet test any model before you buy. No pressure &mdash; just great spas.</p>
+        <div class="cta-btn-row">
+          <a href="grand-cayman.html" class="btn btn-primary">Shop Hot Tubs</a>
+          <a href="#" class="btn btn-outline">Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/paradise-spas-logo-footer.webp" alt="Paradise Spas" style="height:56px;width:auto;display:block;margin-bottom:12px;" />
+          <p class="footer-desc">North Dakota's oldest spa store since 1992. Family-owned, locally operated, and committed to your backyard for life.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">&#9632;</a>
+            <a href="#" class="social-link" aria-label="YouTube">&#9654;</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Shop</div>
+          <ul class="footer-links">
+            <li><a href="#">Artesian Spas</a></li>
+            <li><a href="#">Eco Spas</a></li>
+            <li><a href="#">Strong Spas</a></li>
+            <li><a href="#">Swim Spas</a></li>
+            <li><a href="#">Saunas</a></li>
+            <li><a href="#">Massage Chairs</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Visit Us</div>
+          <div class="footer-location">
+            <div class="footer-location-name">Grand Forks, ND</div>
+            <div class="footer-location-addr">Serving the Midwest &amp; Beyond</div>
+            <a href="tel:7017460000">(701) 746-0000</a>
+          </div>
+          <div style="margin-top:16px;">
+            <div class="footer-heading">Parts Store</div>
+            <a href="https://paradisespasparts.com/" target="_blank" style="font-size:0.85rem; color:rgba(255,255,255,0.6);">paradisespasparts.com</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Hours</div>
+          <ul class="footer-links">
+            <li>Mon &ndash; Fri: 9am &ndash; 6pm</li>
+            <li>Saturday: 9am &ndash; 5pm</li>
+            <li>Sunday: 11am &ndash; 4pm</li>
+          </ul>
+          <div style="margin-top:20px;">
+            <div class="footer-heading">Quick Links</div>
+            <ul class="footer-links">
+              <li><a href="#">Financing</a></li>
+              <li><a href="#">Service &amp; Repairs</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Paradise Spas and Outdoor Living. All Rights Reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
